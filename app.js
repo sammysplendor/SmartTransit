@@ -184,11 +184,23 @@ if (profilePageId === "profile-page") {
       const confirmLogout = confirm("Are you sure you want to logout?");
       if (!confirmLogout) return;
 
+      document.addEventListener("DOMContentLoaded", () => {
+        const token = localStorage.getItem("token");
+        console.log("Token found on profile:", token);
+
+        if (!token || token === "example_token_value") {
+          console.warn("No valid token found. Redirecting to login...");
+          window.location.href = "loginpage.html";
+        }
+      });
+
+      /*  
       const token = localStorage.getItem("token");
       if (!token) {
         alert("No active session found.");
         return;
       }
+    */
 
       try {
         const response = await fetch(
