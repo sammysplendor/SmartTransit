@@ -223,11 +223,11 @@ if (profilePageId === "profile-page") {
         alert("Unable to reach the server. Logging you out locally.");
       }
 
-      const tokenForLogout = getAuthToken();
-      if (!tokenForLogout) {
-        // If no token found, redirect to login page
-        window.location.href = "loginpage.html";
-      }
+      // const tokenForLogout = getAuthToken();
+      // if (!tokenForLogout) {
+      //   // If no token found, redirect to login page
+      //   window.location.href = "loginpage.html";
+      // }
 
       // clear storage only when user explicitly logs out
       localStorage.removeItem("token");
