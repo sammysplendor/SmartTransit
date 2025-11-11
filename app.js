@@ -180,6 +180,55 @@ if (profilePageId === "profile-page") {
   const logoutButton = document.querySelector(".logout-btn");
 
   if (logoutButton) {
+    logoutButton.addEventListener("click", async () => {
+      const confirmLogout = confirm("Are you sure you want to logout?");
+      if (!confirmLogout) return;
+
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("No active session found.");
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          "https://smarttransit-api.onrender.com/v1/auth/logout",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          alert("You have been logged out successfully");
+        } else {
+          alert(
+            data.message ||
+              "Logout failed, but your session will be cleared locally."
+          );
+        }
+      } catch (error) {
+        console.error("Logout API error:", error);
+        alert("Unable to reach the server. Logging you out locally.");
+      }
+
+      // clear storage only when user explicitly logs out
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      localStorage.removeItem("userEmail");
+      localStorage.removeItem("selectedTrip");
+
+      window.location.href = "loginpage.html";
+    });
+  }
+
+  /*
+  if (logoutButton) {
     logoutButton.addEventListener("click", () => {
       const confirmLogout = confirm("Are you sure you want to logout?");
       if (confirmLogout) {
@@ -195,6 +244,7 @@ if (profilePageId === "profile-page") {
       }
     });
   }
+*/
 
   // 3. ----- BOOKING STATUS COLORS -----
   const statusBadge = document.querySelectorAll("booking-status");
