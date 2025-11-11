@@ -13,12 +13,20 @@ async function loginUser(email, password) {
     );
 
     const data = await response.json();
+    console.log("Login response data:", data);
 
     if (response.ok) {
+      const user = data.user || data;
+
+      // localStorage.setItem("token", data.token || "example_token_value");
+      // localStorage.setItem("userName", data.user.name);
+      // localStorage.setItem("userEmail", data.user.email);
+      // localStorage.setItem("userId", data.userId);
+
       localStorage.setItem("token", data.token || "example_token_value");
-      localStorage.setItem("userName", data.user.name);
-      localStorage.setItem("userEmail", data.user.email);
-      localStorage.setItem("userId", data.userId);
+      localStorage.setItem("userName", user.name || "Unknown User");
+      localStorage.setItem("userEmail", user.email || "");
+      localStorage.setItem("userId", user.userId || user.id || "");
 
       alert("Login successful!");
 
