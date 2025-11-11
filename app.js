@@ -156,10 +156,9 @@ const profilePageId = document.body.id;
 
 if (profilePageId === "profile-page") {
   // 1. ----- BACK BUTTON FUNCTIONALITY -----
-
   handleBackButton();
 
-  // Get stored user info
+  // 2. ----- GET AND DISPLAY STORED USER INFO -----
   const userName = localStorage.getItem("userName");
   const userEmail = localStorage.getItem("userEmail");
 
@@ -167,16 +166,19 @@ if (profilePageId === "profile-page") {
   if (userEmail)
     document.getElementById("profile-email").textContent = userEmail;
 
-  // 2. ----- LOGOUT BUTTON FUNCTIONALITY -----
-  function getAuthToken() {
-    return localStorage.getItem("token");
-  }
-  const tokenForLogout = getAuthToken();
-  if (!tokenForLogout) {
-    // If no token found, redirect to login page
-    window.location.href = "loginpage.html";
-  }
+  // 3. ----- PROTECT PROFILE PAGE -----
+  document.addEventListener("DOMContentLoaded", () => {
+    const token = localStorage.getItem("token");
+    console.log("Token found on profile:", token);
 
+    // only redirect if truly missing or dummy value
+    if (!token || token === "example_token_value") {
+      console.warn("No valid token found. Redirecting to login...");
+      window.location.href = "loginpage.html";
+    }
+  });
+
+  // 4. ----- LOGOUT BUTTON FUNCTIONALITY -----
   const logoutButton = document.querySelector(".logout-btn");
 
   if (logoutButton) {
@@ -184,23 +186,11 @@ if (profilePageId === "profile-page") {
       const confirmLogout = confirm("Are you sure you want to logout?");
       if (!confirmLogout) return;
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const token = localStorage.getItem("token");
-        console.log("Token found on profile:", token);
-
-        if (!token || token === "example_token_value") {
-          console.warn("No valid token found. Redirecting to login...");
-          window.location.href = "loginpage.html";
-        }
-      });
-
-      /*  
       const token = localStorage.getItem("token");
       if (!token) {
         alert("No active session found.");
         return;
       }
-    */
 
       try {
         const response = await fetch(
@@ -229,7 +219,7 @@ if (profilePageId === "profile-page") {
         alert("Unable to reach the server. Logging you out locally.");
       }
 
-      // clear storage only when user explicitly logs out
+      // 5. ----- CLEAR STORAGE ONLY ON LOGOUT -----
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       localStorage.removeItem("userEmail");
@@ -238,67 +228,48 @@ if (profilePageId === "profile-page") {
       window.location.href = "loginpage.html";
     });
   }
+}
 
-  /*
-  if (logoutButton) {
-    logoutButton.addEventListener("click", () => {
-      const confirmLogout = confirm("Are you sure you want to logout?");
-      if (confirmLogout) {
-        // Remove user session data
-        localStorage.removeItem("token");
-        localStorage.removeItem("userEmail");
+// 3. ----- BOOKING STATUS COLORS -----
+const statusBadge = document.querySelectorAll("booking-status");
 
-        // Optional: show message
-        alert("You have been logged out successfully");
+statusBadge.forEach((badge) => {
+  const statusText = badge.textContent.trim();
 
-        // Redirect to login page
-        window.location.href = "loginpage.html";
-      }
-    });
+  if (statusText === "Completed") {
+    badge.style.backgroundColor = "#d8d6d6";
+    badge.style.color = "#6b7280";
+  } else if (statusText === "Upcoming") {
+    badge.style.backgroundColor = "#96e6b3";
+    badge.style.color = "#16a34a";
   }
-*/
+});
 
-  // 3. ----- BOOKING STATUS COLORS -----
-  const statusBadge = document.querySelectorAll("booking-status");
+const token = getAuthToken();
+const userId = localStorage.getItem("userId");
 
-  statusBadge.forEach((badge) => {
-    const statusText = badge.textContent.trim();
-
-    if (statusText === "Completed") {
-      badge.style.backgroundColor = "#d8d6d6";
-      badge.style.color = "#6b7280";
-    } else if (statusText === "Upcoming") {
-      badge.style.backgroundColor = "#96e6b3";
-      badge.style.color = "#16a34a";
-    }
-  });
-
-  const token = getAuthToken();
-  const userId = localStorage.getItem("userId");
-
-  if (token && userId) {
-    fetch(`https://smarttransit-api.onrender.com/auth/get-user/${userId}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
+if (token && userId) {
+  fetch(`https://smarttransit-api.onrender.com/auth/get-user/${userId}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then(async (res) => {
+      console.log("Response status:", res.status, res.statusText);
+      const text = await res.text();
+      console.log("Raw response text:", text);
+      if (!res.ok) throw new Error("Fetch failed");
+      return JSON.parse(text);
     })
-      .then(async (res) => {
-        console.log("Response status:", res.status, res.statusText);
-        const text = await res.text();
-        console.log("Raw response text:", text);
-        if (!res.ok) throw new Error("Fetch failed");
-        return JSON.parse(text);
-      })
-      .then((data) => {
-        console.log("User profile:", data);
-        document.getElementById("profile-name").textContent = data.name;
-      })
-      .catch((err) => console.error("Error fetching profile:", err));
-  } else {
-    window.location.href = "loginpage.html";
-  }
+    .then((data) => {
+      console.log("User profile:", data);
+      document.getElementById("profile-name").textContent = data.name;
+    })
+    .catch((err) => console.error("Error fetching profile:", err));
+} else {
+  window.location.href = "loginpage.html";
 }
 
 // ==================== FOR SEARCH RESULT PAGE ==================== //
