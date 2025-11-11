@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/Smarttransit app.css" />
+    <link rel="stylesheet" href="/queries.css" />
+    <script src="/app.js" defer></script>
+    <title>SMART TRANSIT</title>
+  </head>
+  <body id="search-result-page" class="search-result-page-body">
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li>
+          <a
+            id="smart-icon-logo"
+            href="/Smarttransit home.html"
+            alt="smart transit logo"
+          >
+            <div class="logo-icon"><i class="fa-solid fa-bus-side"></i></div>
+            <small>SmartTransit</small></a
+          >
+        </li>
+
+        <li class="user-avatar">
+          <a id="user-avatar" href="profile.html"
+            ><i class="fa-regular fa-user"></i
+          ></a>
+          <p>John Doe</p>
+          <!-- Avatar takes user back to their profile page -->
+        </li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <p>Lagos → Abuja <span class="light-text">| 2025-10-28</span></p>
+      <button><i class="fa-regular fa-pen-to-square"></i> Modify Search</button>
+    </div>
+
+    <!------------ MAIN ----------->
+    <div class="available-trips">
+      <p>Available Trips <span class="light-text">(8)</span></p>
+      <div>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="light-text"
+          ><i class="fa-regular fa-moon"></i> Night Travel Only</label
+        >
+      </div>
+    </div>
+
+    <!-- TRIP CARDS -->
+
+    <!-- Seats below 10 will be indicated with RED color (#ff0000) -->
+
+    <main class="trip-cards-container">
+      <!-- Trip card 1 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚌</p>
+          <div class="bus">
+            <p>ABC Transport</p>
+            <p class="small-txt green-text">11 seats available</p>
+          </div>
+        </section>
+
+        <div class="middle">
+          <div>
+            <p>06:00 AM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-clock"></i>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>02:00 PM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </div>
+
+        <p class="blue-text">₦14,442</p>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 2 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚎</p>
+          <div>
+            <p>Peace Mass Transit</p>
+            <p class="small-txt red-text">7 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>06:00 AM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>02:00 PM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦14,442</p>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 3 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚐</p>
+          <div>
+            <p>GOD Is Good Motors</p>
+            <p class="small-txt green-text">13 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>06:00 AM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>02:00 PM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦14,442</p>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 4 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚍</p>
+          <div>
+            <p>GUO Transport</p>
+            <p class="small-txt green-text">22 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>06:00 AM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>02:00 PM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦14,442</p>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 5 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚌</p>
+          <div>
+            <p>Chisco Transport</p>
+            <p class="small-txt green-text">23 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>06:00 AM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>02:00 PM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦14,442</p>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 6 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚌</p>
+          <div>
+            <p>ABC Transport</p>
+            <p class="small-txt red-text">8 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>08:00 PM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>04:00 AM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦11,742</p>
+        <div>
+          <span class="night-trip-badge small-txt"
+            ><i class="fa-regular fa-moon"></i> Night Trip</span
+          >
+        </div>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 7 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚎</p>
+          <div>
+            <p>Peace Mass Transit</p>
+            <p class="small-txt green-text">20 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>08:00 PM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>04:00 AM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦11,742</p>
+        <div>
+          <span class="night-trip-badge small-txt"
+            ><i class="fa-regular fa-moon"></i> Night Trip</span
+          >
+        </div>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+
+      <!-- Trip card 8 -->
+      <div class="trip-card">
+        <section class="top">
+          <p class="bus-icon">🚐</p>
+          <div>
+            <p>ABC Transport</p>
+            <p class="small-txt green-text">22 seats available</p>
+          </div>
+        </section>
+
+        <section class="middle">
+          <div>
+            <p>08:00 PM</p>
+            <p class="small-txt light-text">Lagos</p>
+          </div>
+          <div>
+            <div class="clock-icon-divider">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <p class="small-txt light-text">8h</p>
+          </div>
+          <div>
+            <p>04:00 AM</p>
+            <p class="small-txt light-text">Abuja</p>
+          </div>
+        </section>
+
+        <p class="blue-text">₦11,742</p>
+        <div>
+          <span class="night-trip-badge small-txt"
+            ><i class="fa-regular fa-moon"></i> Night Trip</span
+          >
+        </div>
+        <a href="/Smarttransit Payment.html" title="Book Trip">Book Now</a>
+        <!-- Link takes user to the Payment page-->
+      </div>
+    </main>
+  </body>
+</html>

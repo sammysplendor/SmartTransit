@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s;
+}
+:root {
+--primary_blue: #1447E6;
+--primary_orange: #f97316;
+--primary_green: #10b981;
+--neutral_gray-900: #111827;
+--neutral_gray-600: #6b7280;
+--neutral_gray-50: #f9fafb;
+--accents_yellow-border: #fef3c7;
+--accents_hover-orange: #ea580c;
+--accents_hover-blue: #1e40af;
+--primary_white: #ffffff;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background-color: var(--neutral_gray-50);
+}
+
+.header_container{
+display: flex;
+margin-top: 2rem;
+margin-left: 2rem;
+gap:1rem;
+font-weight: 500;
+align-items: center;
+}
+.header_logo{
+    color: var(--primary_white);
+    background-color: var(--accents_hover-blue);
+    padding: 3px 5px;
+    border-radius: 50%;
+    align-items: center;
+}
+.Login_welcomelogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.heading_welcome--login{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.login_form--details{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 4rem;
+    gap: 1rem;
+    padding: 2rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+.login_form--details > input{
+    padding: 1rem;
+    border: 1.5px solid var(--neutral_gray-600);
+    border-radius: 5px;
+    width: 50rem;
+}
+@media (max-width: 620px){
+    .login_form--details > input{
+        width: 40rem;
+    }
+}
+@media (max-width: 500px){
+    .login_form--details > input{
+        width: 35rem;
+    }
+}
+@media (max-width: 400px){
+    .login_form--details > input{
+        width: 25rem;
+    }
+}
+.remember_login--check{
+    display: flex;
+    gap: 5px;
+    width: 50rem;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+@media (max-width: 620px){
+    .remember_login--check{
+        width: 40rem;
+    }
+}
+@media (max-width: 500px){
+    .remember_login--check{
+        width: 35rem;
+    }
+}
+@media (max-width: 400px){
+    .remember_login--check{
+        width: 25rem;
+    }
+}
+.login_button{
+    background-color: var(--primary_orange);
+    color: var(--primary_white);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1.5px solid var(--accents_hover-orange);
+    width: 50rem;
+    font-weight: 500;
+}
+@media (max-width: 620px){
+    .login_button{
+        width: 40rem;
+    }
+}
+@media (max-width: 500px){
+    .login_button{
+        width: 35rem;
+    }
+}
+@media (max-width: 400px){
+    .login_button{
+        width: 25rem;
+    }
+}
+.login_button:hover{
+    background-color: var(--accents_hover-orange);
+}
+
+.checkbox{
+    accent-color: var(--primary_blue);
+}
+.login_option--or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 50rem;
+    height: 1px;
+    background-color: var(--neutral_gray-900);
+}
+@media (max-width: 620px){
+    .login_option--or{
+        width: 40rem;
+    }
+}
+@media (max-width: 500px){
+    .login_option--or{
+        width: 35rem;
+    }
+}
+@media (max-width: 400px){
+    .login_option--or{
+        width: 25rem;
+    }
+}
+.login_option--or > span{
+    background-color: var(--neutral_gray-50);
+    padding: 5px;
+    color: var(--neutral_gray-600);
+}
+.login_button--google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+ background-color: transparent;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1.5px solid var(--accents_hover-orange);
+    width: 50rem;
+    font-weight: 600;
+    /* font-size: 1.5rem; */
+}
+@media (max-width: 620px){
+    .login_button--google{
+        width: 40rem;
+    }
+}
+@media (max-width: 500px){
+    .login_button--google{
+        width: 35rem;
+    }
+}
+@media (max-width: 400px){
+    .login_button--google{
+        width: 25rem;
+    }
+}
+.login_button--google > img{
+    width: 1.5rem;
+    height: 1.5rem;
+}

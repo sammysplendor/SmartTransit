@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s;
+}
+:root {
+--primary_blue: #1447E6;
+--primary_orange: #f97316;
+--primary_green: #10b981;
+--neutral_gray-900: #111827;
+--neutral_gray-600: #6b7280;
+--neutral_gray-50: #f9fafb;
+--accents_yellow-border: #fef3c7;
+--accents_hover-orange: #ea580c;
+--accents_hover-blue: #1e40af;
+--primary_white: #ffffff;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 2rem;
+    background-color: var(--neutral_gray-50);
+}
+.header_logo{
+    color: var(--primary_white);
+    background-color: var(--accents_hover-blue);
+    padding: 3px 5px;
+    border-radius: 50%;
+    align-items: center;
+}
+.terms_header--container{
+display: flex;
+margin-top: 2rem;
+margin-left: 2rem;
+gap:1rem;
+font-weight: 500;
+align-items: center;
+justify-content: center;
+}
+.terms_horizontal--line{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--primary_blue);
+}
+.terms-of-services_section{
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+.terms_policies--heading{
+    font-size: 3rem; 
+    margin-top: 1rem;
+}
+.terms_policies--subheading{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.terms_policies--subheading2{
+    text-align: center;
+}
+.contact_subheading{
+    color: var(--neutral_gray-900);
+}
+.terms_heading--texts{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.terms_policies--links>ul{
+    margin: 3rem 0rem 3rem 10rem;
+    font-size: 1.6rem;
+}
+.text-list-wrapper{
+    font-size: 1.6rem;
+}
+.paragraph_one--texts{
+    margin-top: 2rem;
+}
+.sub-texts > ul{
+    margin: 1rem 0rem 0rem 6rem;
+}
+.footer_wrapper{
+    margin-bottom: 2rem;
+}
+@media (max-width: 620px){
+    .terms_policies--subheading{
+        font-size: 1.6rem;
+    }
+    .terms_policies--heading{
+        font-size: 2.5rem;
+    }
+    .terms_policies--links>ul{
+        margin-left: 6rem;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to SmartTransit</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Smarttransit LoginPage.css" />
+    <script src="Smarttransit LoginPage.js" defer></script>
+  </head>
+  <body>
+    <!-- header section -->
+
+    <header class="header_wrapper">
+      <div class="header_container">
+        <div class="header_logo"><i class="ph ph-van"></i></div>
+        <span>SmartTransit</span>
+      </div>
+    </header>
+
+    <!-- Login section -->
+    <main class="Login_form--wrapper">
+      <div class="Login_welcomelogin">
+        <div class="heading_welcome--text">Welcome Back</div>
+        <div class="heading_welcome--login">Login into your account</div>
+      </div>
+
+      <div class="Login_form--container">
+        <form class="login_form--details">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Smarttransit@gmail.com"
+          />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="" />
+
+          <div class="remember_login--check">
+            <input type="checkbox" class="checkbox" />
+            <span>Remember me</span>
+          </div>
+
+          <div class="login_buttons--container">
+            <!-- <a
+              type="button"
+              class="login_button"
+              href="Smarttransit Payment.html"
+              >Log in</a
+            > -->
+            <input type="button" value="Log in" class="login_button" />
+            <div class="login_option--or">
+              <span>or</span>
+            </div>
+            <div class="login_button--google">
+              <img src="/google-logo-2025.png" alt="Google logo" />Log in with
+              Google
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

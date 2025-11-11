@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/Smarttransit app.css" />
+    <link rel="stylesheet" href="/queries.css" />
+    <script src="/app.js" defer></script>
+    <title>SMART TRANSIT</title>
+  </head>
+  <body id="profile-page">
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li>
+          <a id="smart-icon-logo" href="#" alt="smart transit logo">
+            <div class="logo-icon"><i class="fa-solid fa-bus-side"></i></div>
+            <small>SmartTransit</small></a
+          >
+        </li>
+        <!-- Insert the home page link in the href -->
+        <li id="navbar-btn">
+          <a href="loginpage.html"
+            ><i class="fa-solid fa-arrow-left"></i> Back</a
+          >
+        </li>
+        <!-- link to the previous page -->
+      </ul>
+    </nav>
+
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+      <p>My Profile</p>
+      <br />
+
+      <div class="profile-card">
+        <div class="user-detail">
+          <div id="user-profile-avatar"><i class="fa-regular fa-user"></i></div>
+          <div>
+            <p id="profile-name">John Doe</p>
+            <p>
+              <i class="fa-regular fa-envelope light-text"></i
+              ><small class="light-text" id="profile-email"
+                >john.doe@example.com</small
+              >
+            </p>
+          </div>
+
+          <div class="logout-btn-container">
+            <!-- <a class="logout-btn" href="loginpage.html">Logout</a> -->
+            <button class="logout-btn">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+            </button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="status-container">
+          <div>
+            <p class="orange-text">2</p>
+            <p class="light-text">Completed</p>
+          </div>
+          <div>
+            <p class="green-text">1</p>
+            <p class="light-text">Upcoming</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOTAL TRIPS SECTION-->
+    <section class="total-trips-section">
+      <p><b>Member since:</b> October 2025</p>
+      <p><b>Total trips:</b> 3</p>
+    </section>
+
+    <!-- BOOKINGS SECTION -->
+    <section class="bookings-section">
+      <p>My Bookings</p>
+
+      <!-- Card 1 -->
+      <div class="booking-card">
+        <div class="bookings-caption-container">
+          <div class="booking-id">
+            <p>Booking ID</p>
+            <p class="blue-text">NB-12345</p>
+          </div>
+          <span id="booking-status">Completed</span>
+        </div>
+
+        <div class="booking-detail-container">
+          <div class="booking-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p class="light-text">Route</p>
+              <p>Lagos → Abuja</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <p class="light-text">Time</p>
+              <p>Time 09:00 AM</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-calendar-days"></i>
+            <div>
+              <p class="light-text">Date</p>
+              <p>20 0ct 2025</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-solid fa-bus-side"></i>
+            <div>
+              <p class="light-text">Company</p>
+              <p>ABC Transport</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-divider"></div>
+          <div class="price">
+            <p>Total Fare</p>
+            <p class="blue-text">₦12,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="booking-card">
+        <div class="bookings-caption-container">
+          <div class="booking-id">
+            <p>Booking ID</p>
+            <p class="blue-text">NB-12346</p>
+          </div>
+          <span id="booking-status" data-status="upcoming">Upcoming</span>
+        </div>
+
+        <div class="booking-detail-container">
+          <div class="booking-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p class="light-text">Route</p>
+              <p>Ibadan → Enugu</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <p class="light-text">Time</p>
+              <p>Time 02:00 PM</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-calendar-days"></i>
+            <div>
+              <p class="light-text">Date</p>
+              <p>25 0ct 2025</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-solid fa-bus-side"></i>
+            <div>
+              <p class="light-text">Company</p>
+              <p>GUO Transport</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-divider"></div>
+          <div class="price">
+            <p>Total Fare</p>
+            <p class="blue-text">₦9,500</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="booking-card">
+        <div class="bookings-caption-container">
+          <div class="booking-id">
+            <p>Booking ID</p>
+            <p class="blue-text">NB-12347</p>
+          </div>
+          <span id="booking-status">Completed</span>
+        </div>
+
+        <div class="booking-detail-container">
+          <div class="booking-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p class="light-text">Route</p>
+              <p>Port Harcout → Lagos</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <p class="light-text">Time</p>
+              <p>Time 08:00 PM</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-regular fa-calendar-days"></i>
+            <div>
+              <p class="light-text">Date</p>
+              <p>15 0ct 2025</p>
+            </div>
+          </div>
+
+          <div class="booking-detail">
+            <i class="fa-solid fa-bus-side"></i>
+            <div>
+              <p class="light-text">Company</p>
+              <p>Peace Mass Transit</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-divider"></div>
+          <div class="price">
+            <p>Total Fare</p>
+            <p class="blue-text">₦11,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartTransit - Sign Up</title>
+    <link rel="stylesheet" href="Smarttransit SignupPage.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="IMG-20251028-WA0156.jpg"
+          alt="SmartTransit Logo"
+          class="logo-img"
+        />
+
+        <h2>SmartTransit</h2>
+      </div>
+
+      <h3>Create an account</h3>
+      <p>Start with us today</p>
+
+      <form id="signupForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Smarttransit@gmail.com"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="080123345678" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" required />
+
+        <div class="checkbox">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">
+            I accept the <a href="#">Terms of use</a> and
+            <a href="#">Privacy policy</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn">Sign up</button>
+        <!-- <a type="submit" class="btn" href="/loginpage.html">Sign Up</a> -->
+
+        <div class="divider">or</div>
+
+        <button type="button" class="google-btn">
+          <img src="google-logo-2025.png" alt="Google Logo" />
+          Sign up with Google
+        </button>
+      </form>
+    </div>
+
+    <script src="Smarttransit SignupPage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+/* - RESPONSIVENESS ACROSS DIFFERENT SCREEN SIZEZ - */
+
+/* LARGE = DESKTOP: 1024px+ */
+/* Base CSS and layout originally created in desktop */
+
+/* MEDIUM = TABLETS: 768Px - 1024Px */
+
+@media (max-width: 64rem) {
+  /* 1024px / 16px = 64rem */
+
+  html {
+    font-size: 50%; /* 8px / 16px = 50% */
+  }
+
+  body {
+    margin: 9rem;
+  }
+
+  .profile-section {
+    margin-top: 10rem;
+  }
+}
+
+/* SMALL = PHONES (LANSCAPE): 576px - 768px */
+
+@media (max-width: 48rem) {
+  /* 768px / 16px = 48rem */
+
+  html {
+    font-size: 43.75%; /* 7px / 16px = 43.75% */
+  }
+
+  body {
+    margin: 3rem;
+  }
+
+  /* FOR PROFILE PAGE */
+  .logout-btn {
+    width: 300px;
+  }
+
+  /* FOR SEARCH RESULT PAGE */
+  .search-bar {
+    gap: 40rem;
+  }
+
+  .search-bar p {
+    display: flex;
+  }
+
+  .search-bar button {
+    text-wrap: nowrap;
+    font-size: 1.4rem;
+  }
+
+  .available-trips {
+    margin-top: 26rem;
+  }
+}
+
+/* X-SMALL = PHONES (PORTRAIT): < 576px */
+
+@media (max-width: 36rem) {
+  /* 576px / 16px = 36rem */
+
+  html {
+    font-size: 37.5%; /* 6px / 16px = 37.5% */
+  }
+
+  .body {
+    margin: 2.4rem;
+  }
+
+  /* FOR PROFILE PAGE */
+  .booking-detail-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    justify-items: start;
+  }
+
+  /* FOR PAYMENT PAGE */
+  .payment-form input {
+    width: 100%;
+  }
+
+  .exp-date-and-cvv {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exp-date-and-cvv div {
+    width: 100%;
+  }
+
+  /* FOR SEARCH RESULT PAGE */
+  .user-avatar p {
+    display: none;
+  }
+
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .available-trips {
+    margin-top: 30rem;
+  }
+
+  .trip-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  .top {
+    gap: 15rem;
+  }
+
+  .middle {
+    gap: 10rem;
+  }
+
+  .middle div {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .trip-card a {
+    width: 60%;
+    text-align: center;
+  }
+}

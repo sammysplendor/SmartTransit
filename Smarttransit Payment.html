@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Smarttransit app.css" />
+    <link rel="stylesheet" href="/queries.css" />
+    <script src="Smarttransit Payment.js" defer></script>
+    <title>SMART TRANSIT</title>
+  </head>
+  <body id="payment-page">
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li>
+          <a id="smart-icon-logo" href="#" alt="smart transit logo">
+            <div class="logo-icon"><i class="fa-solid fa-bus-side"></i></div>
+            <small>SmartTransit</small></a
+          >
+        </li>
+        <!-- Insert the home page link in the href -->
+        <li id="navbar-btn">
+          <a href="search-result.html"
+            ><i class="fa-solid fa-arrow-left"></i> Back</a
+          >
+        </li>
+        <!-- link to the previous page -->
+      </ul>
+    </nav>
+    <p class="light-text payment-navigation">
+      Search → Select Trip → Booking → <span class="blue-text">Payment</span>
+    </p>
+
+    <!-- --------------- PAGE CONTENT --------------- -->
+    <main class="overall-section">
+      <p>Review & Pay</p>
+
+      <!-- ORDER SUMMARY SECTION -->
+      <section class="order-summary-section">
+        <div class="order-summary-detail">
+          <p><b>Order Summary</b></p>
+
+          <div class="details">
+            <div>
+              <p class="light-text small-txt">Route</p>
+              <p>Lagos → Abuja</p>
+            </div>
+
+            <div>
+              <p class="light-text small-txt">Company</p>
+              <p>Peace Mass Transit</p>
+            </div>
+
+            <div>
+              <p class="light-text small-txt">Depature</p>
+              <p>06:00 AM</p>
+            </div>
+
+            <div>
+              <p class="light-text small-txt">Passenger</p>
+              <p>James Akinyemi</p>
+            </div>
+
+            <div>
+              <p class="light-text small-txt">Seat</p>
+              <p>E2</p>
+            </div>
+          </div>
+
+          <div class="card-divider"></div>
+
+          <div class="total-amt">
+            <p>Total Amount</p>
+            <p class="blue-text">₦13,967</p>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <div class="card-divider"></div>
+          <p class="small-txt light-text">
+            <i class="fa-solid fa-shield"></i> Secured by SSL
+          </p>
+        </div>
+      </section>
+
+      <!-- PAYMENT DETAILS SECTION -->
+      <section class="payment-details-section">
+        <p><b>Payment Details</b></p>
+
+        <!-- Payment form -->
+        <form action="" method="get" class="payment-form">
+          <div>
+            <div>
+              <label for="name">Cardholder Name</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="card-name"
+                name="name"
+                placeholder="Cardholder name"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="number">Card Number</label>
+            </div>
+            <div>
+              <input
+                type="password"
+                id="card-number"
+                name="card number"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="exp-date-and-cvv">
+            <div>
+              <div>
+                <label for="date">Expiry Date</label>
+              </div>
+              <div>
+                <input
+                  type="date"
+                  id="expiry-date"
+                  name="expiry date"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <label for="cvv">cvv</label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  id="cvv"
+                  name="CVV"
+                  placeholder="123"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <small class="light-text"
+              ><i class="fa-solid fa-lock"></i> Your payment information is
+              secure and encrypted</small
+            >
+          </p>
+
+          <button type="submit" id="payment-button" title="Confirm Payment">
+            Confirm Payment
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
